@@ -9,15 +9,29 @@
         android:background="@color/bgClr"
         tools:context=".MainActivity">
 
-        <ImageView
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:cardCornerRadius="8dp"
             android:id="@+id/music1"
-            android:layout_width="344.01dp"
-            android:layout_height="489.44dp"
-            android:layout_marginTop="30dp"
-            android:src="@drawable/img"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_margin="30dp"
+            app:layout_constraintBottom_toTopOf="@id/music_seekbar">
+            <ImageView
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/img"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.cardview.widget.CardView>
+
+
 
         <SeekBar
             android:id="@+id/music_seekbar"
