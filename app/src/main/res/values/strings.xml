@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Music</string>
+    <string name="shuffle_btn">shuffle</string>
+    <string name="rewind_btn">rewind</string>
+    <string name="play_btn">play</string>
+    <string name="forward_btn">forward</string>
+    <string name="repeat_btn">repeat</string>
 </resources>

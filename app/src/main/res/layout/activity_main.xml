@@ -9,12 +9,57 @@
         android:background="@color/bgClr"
         tools:context=".MainActivity">
 
+        <ImageView
+            android:id="@+id/music1"
+            android:layout_width="344.01dp"
+            android:layout_height="489.44dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/img"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <SeekBar
+            android:id="@+id/music_seekbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/music1" />
+
+        <TextView
+            android:id="@+id/time_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="small Text"
+            android:textColor="@color/txtClr"
+            app:layout_constraintBottom_toTopOf="@+id/shuffle_btn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/music_seekbar"></TextView>
+
+
+        <TextView
+            android:id="@+id/song_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Song Title"
+            android:textColor="@color/txtClr"
+            android:textSize="24sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/time_left"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.339"
+            app:layout_constraintStart_toEndOf="@+id/time_left"></TextView>
+
         <ImageButton
             android:id="@+id/shuffle_btn"
             android:layout_width="81dp"
             android:layout_height="60dp"
             android:layout_marginStart="10dp"
             android:background="@color/bgClr"
+            android:contentDescription="@string/shuffle_btn"
             app:layout_constraintBottom_toBottomOf="@+id/rewind_btn"
             app:layout_constraintEnd_toStartOf="@+id/rewind_btn"
             app:layout_constraintHorizontal_bias="0.5"
@@ -26,6 +71,7 @@
             android:layout_width="81dp"
             android:layout_height="60dp"
             android:background="@color/bgClr"
+            android:contentDescription="@string/rewind_btn"
             app:layout_constraintBottom_toBottomOf="@+id/play_btn"
             app:layout_constraintEnd_toStartOf="@+id/play_btn"
             app:layout_constraintHorizontal_bias="0.5"
@@ -36,8 +82,9 @@
             android:id="@+id/play_btn"
             android:layout_width="81dp"
             android:layout_height="60dp"
-            android:layout_marginBottom="50dp"
+            android:layout_marginBottom="30dp"
             android:background="@color/bgClr"
+            android:contentDescription="@string/play_btn"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/forward_btn"
             app:layout_constraintHorizontal_bias="0.5"
@@ -49,6 +96,7 @@
             android:layout_width="81dp"
             android:layout_height="60dp"
             android:background="@color/bgClr"
+            android:contentDescription="@string/forward_btn"
             app:layout_constraintBottom_toBottomOf="@+id/play_btn"
             app:layout_constraintEnd_toStartOf="@+id/repeat_btn"
             app:layout_constraintHorizontal_bias="0.5"
@@ -61,6 +109,7 @@
             android:layout_height="60dp"
             android:layout_marginEnd="10dp"
             android:background="@color/bgClr"
+            android:contentDescription="@string/repeat_btn"
             app:layout_constraintBottom_toBottomOf="@+id/forward_btn"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
